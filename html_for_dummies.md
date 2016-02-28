@@ -1,5 +1,20 @@
 # HTML 5 for dummies
 
+## Table of contents
+1. [What is HTML?](#what-is-html)
+2. [`<html>` tag](#html-tag)
+3. [General structure of a .html-file](#general-structure-of-a-html-file)
+4. [Attributes](#attributes)
+  1. Class
+  2. id
+  3. href
+5. [Basic formatting]()
+6. []()
+7. []()
+8. []()
+
+## test
+
 ## What is HTML?
 HTML stands for Hyper Text Markup Language. It is the language used to create all websites.
 
