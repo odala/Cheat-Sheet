@@ -32,8 +32,6 @@
 23. [Include JavaScript-files](#include-javascript-files)
 24. [Include .css-files](#include-css-files)
 
-## test
-
 ## What is HTML?
 HTML stands for Hyper Text Markup Language. It is the language used to create all websites.
 
