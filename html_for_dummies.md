@@ -5,13 +5,32 @@
 2. [`<html>` tag](#html-tag)
 3. [General structure of a .html-file](#general-structure-of-a-html-file)
 4. [Attributes](#attributes)
-  1. Class
-  2. id
-  3. href
-5. [Basic formatting]()
-6. []()
-7. []()
-8. []()
+  1. [Class](#class)
+  2. [id](#id)
+  3. [href](#href)
+5. [Basic formatting](#basic-formatting)
+6. [Body](#body)
+  1. [Usage](#usage)
+7. [Children](#children)
+8. [Comments](#comments)
+9. [Div](#div)
+10. [Head](#head)
+11. [Headings](#headings)
+12. [Horizontal rules](#horizontal-rules)
+13. [Hyperlinks](#hyperlinks)
+14. [Images](#images)
+15. [Line breaks](#line-breaks)
+16. [Links](#links)
+17. [Lists](#lists)
+  1. [Unordered lists](#unordered-lists)
+  2. [Ordered lists](#ordered-lists)
+18. [Paragraphs](#paragraphs)
+19. [Semantic formatting](#semantic-formatting)
+20. [Tables](#tables)
+21. [Tags & Elements](#tags-and-elements)
+22. [Title](#title)
+23. [Include JavaScript-files](#include-javascript-files)
+24. [Include .css-files](#include-css-files)
 
 ## test
 
@@ -124,7 +143,13 @@ HTML comments are sometimes used in code to explain parts of the markup. They ar
 ```
 
 ## Div
-A block level container (or 'division' of the web page) for content with no semantic meaning.
+A block level container (or 'division' of the web page) for content with no semantic meaning. A `<div>` element groups other elements together into sections of the web page, such as a navigation bar, the main body, and the footer.
+``` html
+<div class="xxx"> <!-- "nav": groups the elements into the navigation bar section. "jombotron":groups the elements into the large feature section of the web page.-->
+    <div class="container"> <!--  wraps the contents in a container-->
+    </div>
+</div>
+```
 
 ``` html
 <div>This is a div element.</div>
@@ -265,7 +290,7 @@ An element for displaying information in rows and columns. Supports headers and 
 </table>
 ```
 
-## Tags & Elements
+## Tags and Elements
 Tags are basic labels that define and separate parts of your markup into elements. They are comprised of a keyword surrounded by angle brackets <>. Content goes between two tags and the closing one is prefixed with a slash (Note: there are some self-closing HTML tags, like image tags). Tags also have attributes, which are
 
 ``` html
@@ -291,14 +316,5 @@ Place within `<head> </head>`
 ``` html
 <link href="font.css" rel="stylesheet"> <!-- Order matters! First, make fonts available to the webpage, then use it in the main.css-->
 <link href="main.css"rel="stylesheet"/>
-```
-
-## Group elements together
-A `<div>` element groups other elements together into sections of the web page, such as a navigation bar, the main body, and the footer.
-``` html
-<div class="xxx"> <!-- "nav": groups the elements into the navigation bar section. "jombotron":groups the elements into the large feature section of the web page.-->
-    <div class="container"> <!--  wraps the contents in a container-->
-    </div>
-</div>
 ```
 
