@@ -4,6 +4,7 @@
 1. Press Ctrl + l in the filedirectory.
 2. Write smb://sambaad.stud.ntnu.no/odala
 3. Press enter
+4. Use win-ntnu-no/username as username
 
 ## Connect to server at NTNU
 Write the following in the terminal:
