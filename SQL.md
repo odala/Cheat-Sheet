@@ -15,15 +15,16 @@ See: [List of SQL commands.](https://www.codecademy.com/articles/sql-commands)
   - `UPDATE` edits a row in a table.
   - `ALTER TABLE` changes an existing table, i.e. by adding a column.
   - `DELETE FROM` deletes rows from a table.
+  - `CHECK` is used to limit the value range that can be placed in a column.
   
 Example:
 ```sql
 # --- Creates a table with the following columns: id, title, genre, year.
 CREATE TABLE movies (
-    id INTEGER, 
+    id INTEGER PRIMARY KEY, 
     title TEXT, 
     genre TEXT, 
-    year INTEGER
+    year INTEGER CHECK (year < 2018)
 );
 
 # --- Insert two rows into the table.
@@ -65,8 +66,12 @@ WHERE imdb_rating IS NULL;
   
 Example:
 ```sql
-# --- Get the name and imdb_rating column.
-SELECT name, imdb_rating  # (use * to select all columns)
+# --- Query to look at table in undefined order.
+SELECT *
+FROM movies;
+
+# --- Query to look at specified columns.
+SELECT name, imdb_rating
 FROM movies;
 
 # --- Get all the distinct entries in the genre column.
@@ -184,7 +189,7 @@ AS is a keyword in SQL that allows you to rename a column or table in the result
     - E.g. `CREATE TABLE artists(id INTEGER PRIMARY KEY, name TEXT);`
 - A *foreign key* is a column that contains the primary key to another table in the database. We use foreign keys and primary keys to connect rows in two different tables. One table's foreign key holds the value of another table's primary key. Unlike primary keys, foreign keys do not need to be unique and can be `NULL`.
 - One way to query multiple tables is to write a SELECT statement with multiple table names separated by a comma, also known as a *cross join*.
-  - E.g. `SELECT table_name.column_name, table2_name.column2_name` FROM table_name, table2_name;
+  - E.g. `SELECT table.column_name, table2.column_name` FROM table, table2;
 - In SQL, *joins* are used to combine data from multiple tables. 
 - `INNER JOIN` will combine rows from different tables if the join condition is true. 
   - E.g. `SELECT * FROM albums JOIN artists ON albums.artist_id = artists.id;`
@@ -192,6 +197,7 @@ AS is a keyword in SQL that allows you to rename a column or table in the result
   - E.g. `SELECT * FROM albums LEFT JOIN artists ON albums.artist_id = artists.id;`
 - `AS` is a keyword in SQL that allows you to rename a column or table in the result set using an alias. NB: the columns have not been renamed in either table. The aliases only appear in the result set.
   - E.g. `SELECT albums.name AS 'Album', albums.year, artists.name AS 'Artist' FROM albums JOIN artists ON albums.artist_id = artists.id WHERE albums.year > 1980;`
+  
   
   
   
