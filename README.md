@@ -1,6 +1,8 @@
 # Cheat-Sheet
 
 ## Table of content
+0. Database
+  1. [SQL](SQL.md)
 1. Web
   1. [HTML](html_for_dummies.md)
   2. [CSS](css_for_dummies.md)
