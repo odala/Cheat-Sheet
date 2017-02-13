@@ -1,6 +1,6 @@
 # Cheat-Sheet
 
-## Table of content
+## Table of contents
 0. Database
   1. [SQL](SQL.md)
 1. Web
