@@ -208,16 +208,6 @@ FROM fake_apps
 GROUP BY price;
 ```
 
-## General form of a SQL query
-Each clause in a statement should begin on a new line; the beginning of each clause should line up with the begiinning of other clauses; if a clause has several parts, they should appear on a separate line and be indented under the start of the clause to show the relationship; uppercase letters are used to represent reserved words; lowercase letters are used to represent user-defined words; a vertical bar indicates a choice among alternative; curly braces indicate a required element; square brackets indicate an optional element; and an ellipsis is used to indicate optional repetition of an item zero or more times.
-```sql
-SELECT [DISTINCT | ALL] {* | [columnExpression [AS newName]] (, ...)}
-FROM tableName [AS alias] (, ...)
-[WHERE condition]
-[GROUP BY columnlist] [HAVING condition]
-[ORDER BY columnlist] [DESC | ASC] (, ...);
-```
-
 ## Subqueries
 A subquery produces a temporary table with results that can be accessed and used by the outer statement. A subquery can be used immediately following a relational operator in a `WHERE` clause, or a `HAVING` clause (it must appear on the right-hand side of a comparison). The subquery itself is always enclosed in parentheses.
 
@@ -297,3 +287,47 @@ The following constraints can be defined in the `CREATE` and `ALTER TABLE` state
 - General constraints. The `CREATE ASSERTION assertionName CHECK(searchCondition)` statement is an integrity constraint that is not directly linked with a table definition. This statement is similar to the `CHECK` clause, however, when a general constraint involves more than one table, it may be preferable to use this rather than duplicate the check in each table.
   
   
+## General form for creating, alterin and removing a table
+```sql
+CREATE TABLE TableName(
+  {columnName dataType [NOT NULL] [UNIQUE] [DEFAULT defaultOption] [CHECK(searchCondition)] [, ...]}
+  [PRIMARY KEY (listOfColumns),]
+  {[UNIQUE (listOfColumns)][, ...]}
+  {[FOREIGN KEY (listOfForeignKeyColumns) REFERENCES ParentTableName [(listOfCandidateKeyColumns)]
+    [MATCH {PARTIAL | FULL}]
+    [ON UPDATE referentialAction]
+    [ON DELETE referentialAction]] [, ...]}
+  {[CHECK(searchCondition)][,...]});
+```
+```sql
+ALTER TABLE TableName
+[ADD columnName dataType [NOT NULL] [UNIQUE]]
+[DEFAULT defaultOption][CHECK(searchCondition)]
+[DROP columnName [RESTRICT | CASCADE]]
+[ADD [CONSTRAINT [ConstraintName]] tableConstraintDefintion]
+[DROP CONSTRAINT ConstraintName [RESTRICT | CASCADE]]
+[ALTER columnName SET DEFAULT defaultOption]
+[ALTER columnName DROP DEFAULT];
+```
+
+```sql
+DROP TABLE TableName [RESTRICT | CASCADE];
+```
+
+## General form for creating and removing a view
+```sql
+CREATE VIEW ViewName [(newColumnName [, ...])]
+AS subselect [WITH [CASCADED | LOCAL] CHECK OPTION];
+
+DROP VIEW ViewName [RESTRICT | CASCADE];
+```
+
+## General form of a SQL query
+Each clause in a statement should begin on a new line; the beginning of each clause should line up with the begiinning of other clauses; if a clause has several parts, they should appear on a separate line and be indented under the start of the clause to show the relationship; uppercase letters are used to represent reserved words; lowercase letters are used to represent user-defined words; a vertical bar indicates a choice among alternative; curly braces indicate a required element; square brackets indicate an optional element; and an ellipsis is used to indicate optional repetition of an item zero or more times.
+```sql
+SELECT [DISTINCT | ALL] {* | [columnExpression [AS newName]] (, ...)}
+FROM tableName [AS alias] (, ...)
+[WHERE condition]
+[GROUP BY columnlist] [HAVING condition]
+[ORDER BY columnlist] [DESC | ASC] (, ...);
+```
