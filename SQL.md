@@ -5,7 +5,20 @@
 
 See: [List of SQL commands.](https://www.codecademy.com/articles/sql-commands)
 
-## Build Tables
+## Table of contents
+1. [Build tables](#build-tables)
+2. [Retrieve information from a database by writing queries](#retrieve-information-from-a-database-by-writing-queries)
+3. [Aggregate functions](#aggregate-functions)
+4. [Subqueries](#subqueries)
+5. [Multiple tables](#multiple-tables)
+6. [Combining result tables](#combining-result-tables)
+7. [Integrity enhancement feature](#integrity-enhancement-feature)
+8. [General form for creating, altering and removing a table](#general-form-for-creating-altering-and-removing-a-table)
+9. [General form for creating and removing a view](#general-form-for-creating-and-removing-a-view)
+10. [General form of a SQL query](#general-form-of-a-sql-query)
+
+
+## Build tables
 - A *relational database* is a database that organizes information into one or more tables.
 - A *table* is a collection of data organized into rows and columns.
 - A *statement* is a string of characters that the database recognizes as a valid command.
@@ -67,7 +80,7 @@ WHERE imdb_rating IS NULL;
   - `CURRENT_DATE`, `CURRENT_TIME`, `CURRENT_TIMESTAMP`, `EXTRACT`, 
   - `ABS`, `MOD`, `LN`, `EXP`, `POWER`, `SQRT`, `FLOOR`, `CEIL`.
   
-## Retrieve Information from a Database by Writing Queries
+## Retrieve information from a database by writing queries
   - `SELECT` is the clause you use every time you want to query information from a database.
   - `SELECT DISTINCT` specifies that the statement is going to be a query that returns unique values in the specified column(s).
   - `WHERE` is a popular command that lets you filter the results of the query based on conditions that you specify.
@@ -287,7 +300,7 @@ The following constraints can be defined in the `CREATE` and `ALTER TABLE` state
 - General constraints. The `CREATE ASSERTION assertionName CHECK(searchCondition)` statement is an integrity constraint that is not directly linked with a table definition. This statement is similar to the `CHECK` clause, however, when a general constraint involves more than one table, it may be preferable to use this rather than duplicate the check in each table.
   
   
-## General form for creating, alterin and removing a table
+## General form for creating, altering and removing a table
 ```sql
 CREATE TABLE TableName(
   {columnName dataType [NOT NULL] [UNIQUE] [DEFAULT defaultOption] [CHECK(searchCondition)] [, ...]}
