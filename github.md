@@ -39,6 +39,15 @@ CREATE A .gitignore
     touch .gitignore	# creates a local .gitignore file in the repo
     git config --global core.exludefile ~/.gitignore_global	# creates a global .gitignore_global file for ignoring files in every git repo on your computer
     
+NEW BRANCH
+
+    git checkout -b iss53
+
+the same as
+
+    git branch iss53
+    git checkout iss53
+    
 BRANCHING
 
     git checkout <name of branch>
