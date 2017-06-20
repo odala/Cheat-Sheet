@@ -1,4 +1,4 @@
-# GitHub for dummies
+# Git for Dummies
 
 VIEW STATUS OF REPOSITORY
 
@@ -38,3 +38,12 @@ CREATE A .gitignore
 
     touch .gitignore	# creates a local .gitignore file in the repo
     git config --global core.exludefile ~/.gitignore_global	# creates a global .gitignore_global file for ignoring files in every git repo on your computer
+    
+BRANCHING
+    git checkout <name of branch>
+    git pull origin <name of branch>
+    git push origin <name of branch>
+    git branch -a  // List all branches (also those not on your local workspace)
+
+DSICARD ALL LOCAL CHANGES
+    git reset --hard
