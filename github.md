@@ -11,6 +11,10 @@ ADD TO STAGING AREA
 COMMIT
 
     git commit -m "<write what the commit of the staged files do>"
+    
+DISCARD ALL LOCAL CHANGES
+
+    git reset --hard
 
 PUSHING TO A REMOTE
 
@@ -63,10 +67,6 @@ MERGE BRANCH WITH MASTER
     git checkout master
     git pull origin master
     git merge <branch name>
-    
-    
+    git push origin master
     
 
-DSICARD ALL LOCAL CHANGES
-
-    git reset --hard
