@@ -40,10 +40,24 @@ CREATE A .gitignore
     git config --global core.exludefile ~/.gitignore_global	# creates a global .gitignore_global file for ignoring files in every git repo on your computer
     
 BRANCHING
+
     git checkout <name of branch>
     git pull origin <name of branch>
     git push origin <name of branch>
-    git branch -a  // List all branches (also those not on your local workspace)
+    
+LIST ALL BRANCHES (-a gives also those not local to your workspace)
+
+    git branch -a
+    
+MERGE BRANCH WITH MASTER
+
+    git checkout master
+    git pull origin master
+    git merge <branch name>
+    
+    
+    
 
 DSICARD ALL LOCAL CHANGES
+
     git reset --hard
