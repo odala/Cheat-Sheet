@@ -69,4 +69,10 @@ MERGE BRANCH WITH MASTER
     git merge <branch name>
     git push origin master
     
+REMOVE BRANCH LOCALLY
+    
+    git branch -d <branch name>
+    
+REMOVE BRANCH REMOTE
 
+    git push origin --delete <branch name>
