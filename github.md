@@ -76,3 +76,11 @@ REMOVE BRANCH LOCALLY
 REMOVE BRANCH REMOTE
 
     git push origin --delete <branch name>
+    
+STASHING
+
+    git stash
+    git stash list
+    git stash apply
+    git stash apply stash@{2}
+    git stash drop stash@{2}
